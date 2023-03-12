@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  color: black;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: aquamarine;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.accardion {
+  display: flex;
+  flex-direction: column;
+}
+.accardion:hover {
+  cursor: pointer;
+}
+.accardion__label:hover {
+  cursor: pointer;
+}
+.accardion__label:hover ~ .accardion__image {
+  background: red;
+  width: 500px;
+  height: 100px;
+  opacity: 1;
+}
+
+.accardion__li {
+  display: flex;
+  flex-direction: column;
+}
+.accardion__input {
+  display: none;
+}
+.accardion__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accardion__title {
+  font-size: 2rem;
+  color: blue;
+  transition: 0.3s;
+}
+.accardion:hover .accardion__title {
+  color: black;
+}
+.accardion__btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: 0.5s;
+  padding: 10px;
+  background: orangered;
+}
+.accardion__image {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.accardion__btn img {
+  width: 100%;
+  height: 100%;
+}
+.accardion__input:checked + .accardion__label .accardion__title {
+  color: red;
+}
+
+.accardion__input:checked + .accardion__label .accardion__btn {
+  transform: rotate(45deg);
+}
+.accardion__input:checked ~ .accardion__image {
+  background: red;
+  width: 500px;
+  height: 100px;
+  opacity: 1;
+}
